@@ -27,13 +27,14 @@
   			</div>
 		</nav> 
 
+		<!-- login -->
 		 <form class="loginform" action="#">
 		 	<!-- username -->
     			<p> <small> <input type="email" name="email" placeholder="Email"> </p> 
     			</p> <input type="password" name="password" placeholder="Password"></p>
   				<button type="submit" class="button">submit</button> </small>
   				<br/>
-  				<p class="forgot"><a href="#">forgot password?</a><p>
+  				<p class="forgot"><a href="#">forgot password?</a></p>
 		</form> 
 
 		<!-- footer -->

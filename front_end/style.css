@@ -25,13 +25,17 @@ footer{
 }
 form.loginform{
 	
-	
 	text-align:center;
 }
 p.forgot{
 
 	font-size:44%;
-	color:red;
+	text-align:center;
+	
+}
+p.signup{
+
+	font-size:44%;
 	text-align:center;
 	
 }
