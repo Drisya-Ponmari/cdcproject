@@ -6,11 +6,11 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-
 	<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+		
 		<!--Navigation bar -->
 		<nav class="navbar navbar-inverse">
   			<div class="container-fluid">
@@ -27,6 +27,14 @@
   			</div>
 		</nav> 
 
+		 <form class="loginform" action="#">
+		 	<!-- username -->
+    			<p> <small> <input type="email" name="email" placeholder="Email"> </p> 
+    			</p> <input type="password" name="password" placeholder="Password"></p>
+  				<button type="submit" class="button">submit</button> </small>
+  				<br/>
+  				<p class="forgot"><a href="#">forgot password?</a><p>
+		</form> 
 
 		<!-- footer -->
 				<footer>
