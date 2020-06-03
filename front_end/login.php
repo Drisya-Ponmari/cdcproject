@@ -28,9 +28,9 @@
 		</nav> 
 
 		<!-- login -->
-		 <form class="loginform" action="#">
+		 <form class="loginform" action="login_connect.php">
 		 	<!-- username -->
-    			<p> <small> <input type="email" name="email" placeholder="Email"> </p> 
+    			<p> <small> <input type="text" name="email" placeholder="Email"> </p> 
     			</p> <input type="password" name="password" placeholder="Password"></p>
   				<button type="submit" class="button">submit</button> </small>
   				<br/>
