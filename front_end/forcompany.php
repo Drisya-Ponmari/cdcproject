@@ -29,7 +29,7 @@
 
 		<!-- login and signup -->
 		<!-- login -->
-		 <form class="loginform" action="#">
+		 <form class="loginform" action="backend/company_connect.php" method = "POST">
 		 	<!-- username -->
     			<p> <small> <input type="text" name="email" placeholder="Email"> </p> 
     			</p> <input type="password" name="password" placeholder="Password"></p>
