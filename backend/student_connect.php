@@ -27,4 +27,5 @@
 	{
 		echo "0 results";
 	}
+       header("Location: home_student.php");
 ?>
