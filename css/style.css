@@ -4,6 +4,7 @@ body {
    padding:0;
    height:100%;
 }
+
 container{
    min-height:100%;
    position:relative;
@@ -16,12 +17,17 @@ body {
    padding:10px;
    padding-bottom:60px;   /* Height of the footer */
 }
+
 footer{
    position:absolute;
    bottom:0;
    width:100%;
    height:60px;   /* Height of the footer */
    background:black;
+}
+form.enter
+{
+	text-align:center;
 }
 form.loginform{
 	
@@ -58,5 +64,29 @@ a.choosec{
 	text-align:center;
 	color:white;
 	font-size:200%;
+}
+
+form {
+    width: 100%;
+    margin: 0 auto;
+}
+
+label, input {
+    display: inline-block;
+}
+
+label {
+    width: 30%;
+    text-align: right;
+}
+
+label + input {
+    width: 30%;
+    margin: 0 30% 0 4%;
+}
+
+
+input + input {
+    float: right;
 }
 

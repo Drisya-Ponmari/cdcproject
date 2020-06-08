@@ -1,7 +1,7 @@
 <?php
 
 	session_start();
-	$_SESSION["rr"] = "tt";
+	$_SESSION["ss"] = "ss";
 	$username = $_POST["email"];
 	$password = $_POST["password"];
 	$mysqli = new mysqli("localhost",$username,$password);

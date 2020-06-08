@@ -13,7 +13,7 @@
 		<!--php code -->
 		<?php
 			session_start();
-		 	if(!isset($_SESSION["rr"])){
+		 	if(!isset($_SESSION["ss"])){
 		    	 header('location:/front_end/home.php');
 			}
 		?>
@@ -33,9 +33,10 @@
   			</div>
 		</nav> 
 
+		<!-- Showing the options -->
 		<ul class="choosea">
-			<p> <div class="chooseb" ><a class="choosec" href="#"> MY ACCOUNT</a></div> </p>
-			<p> <div class="chooseb" ><a class="choosec" href="#"> VIEW CV</a></div>    </p>
+			<p> <div class="chooseb" ><a class="choosec" href="#"> VIEW CV</a></div> </p>
+			<p> <div class="chooseb" ><a class="choosec" href="/student/edit_cv.php"> EDIT CV</a></div>    </p>
 			<p> <div class="chooseb" ><a class="choosec" href="#"> BROWSE OPPURTUNITIES</a></div></p>
 			<p> <div class="chooseb" ><a class="choosec" href="#"> STATUS OF APPLICATION</a></div> </p>
 
