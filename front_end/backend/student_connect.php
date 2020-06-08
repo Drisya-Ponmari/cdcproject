@@ -1,11 +1,12 @@
 <?php
 
 	session_start();
-	$_SESSION["ss"] = "ss";
 	$username = $_POST["email"];
 	$password = $_POST["password"];
 	$mysqli = new mysqli("localhost",$username,$password);
 	#echo "yes".$username;
+	$_SESSION["user"] = $username;
+	$_SESSION["pass"] = $password;
 	$sql = "SET ROLE stud_role";
 	if($mysqli->query($sql) == TRUE)
 	{

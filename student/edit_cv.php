@@ -1,3 +1,11 @@
+<!--Back button disabling if we click logout -->
+<?php
+			session_start();
+		 	if(!isset($_SESSION["user"])){
+		    	 header('location:/front_end/home.php');
+			}
+?>
+
 <?php
 	include_once 'databaseconnect.php';
 	if(count($_POST)>0)
@@ -5,7 +13,9 @@
 		mysqli_query($conn,"UPDATE stud_view set Roll_no='" . $_POST['Roll_no'] . "', name='" . $_POST['name'] . "', department='" . $_POST['department'] . "', gender='" . $_POST['gender'] . "' ,semester='" . $_POST['semester'] . "' WHERE Roll_no='" . $_POST['Roll_no'] . "'");
 		$message = "Record Modified Successfully";
 	}
-	$result = mysqli_query($conn,"SELECT * FROM stud_view WHERE Roll_no='111701030'");
+	session_start();
+	$rollno = $_SESSION["user"];
+	$result = mysqli_query($conn,"SELECT * FROM stud_view WHERE Roll_no=$rollno ");
 	$row= mysqli_fetch_array($result);
 ?>
 
@@ -20,14 +30,6 @@
 	<link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-		<!--prevents the bsck button after logging in -->
-		<!--php code -->
-		<?php
-			session_start();
-		 	if(!isset($_SESSION["ss"])){
-		    	 header('location:/front_end/home.php');
-			}
-		?>
 
 		<!--Navigation bar -->
 		<nav class="navbar navbar-inverse">

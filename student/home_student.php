@@ -1,3 +1,24 @@
+		<!--prevents the bsck button after logging in -->
+		<!--php code -->
+<?php
+	session_start();
+	if(!isset($_SESSION["user"])){
+		header('location:/front_end/home.php');
+	}
+?>
+
+
+<?php
+	include_once 'databaseconnect.php';
+	$result = mysqli_query($conn,"SELECT * FROM verify_view");
+	$row= mysqli_fetch_array($result);
+	if ($row["verified"] == "no") {
+		$mess = "Dear ".$row["Roll_no"]." , You are unverified. Please contact Student Respresentative to verify yourself";
+	}
+	else {
+		$mess = "Verified Student";
+	}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,14 +30,6 @@
 	<link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-		<!--prevents the bsck button after logging in -->
-		<!--php code -->
-		<?php
-			session_start();
-		 	if(!isset($_SESSION["ss"])){
-		    	 header('location:/front_end/home.php');
-			}
-		?>
 
 		<!-- ------------------------------------ -->
 
@@ -33,11 +46,15 @@
   			</div>
 		</nav> 
 
+		<h3 style="text-align:center"><?php if(isset($mess)) { echo $mess; } ?></h3>
 		<!-- Showing the options -->
 		<ul class="choosea">
 			<p> <div class="chooseb" ><a class="choosec" href="#"> VIEW CV</a></div> </p>
 			<p> <div class="chooseb" ><a class="choosec" href="/student/edit_cv.php"> EDIT CV</a></div>    </p>
-			<p> <div class="chooseb" ><a class="choosec" href="#"> BROWSE OPPURTUNITIES</a></div></p>
+		<?php if( $mess	== "Verified Student"){
+			echo '<p> <div class="chooseb" ><a class="choosec" href="#"> BROWSE OPPURTUNITIES</a></div> </p>';
+			} 
+		?>
 			<p> <div class="chooseb" ><a class="choosec" href="#"> STATUS OF APPLICATION</a></div> </p>
 
 		</ul>
