@@ -10,7 +10,6 @@
   	<link rel="stylesheet" type="text/css" href="/loginstyle/util.css">
 	<link rel="stylesheet" type="text/css" href="/loginstyle/main.css">
 	
-	
 	<style>
   /* Make the image fully responsive */
   .carousel-inner img {
@@ -18,9 +17,6 @@
     height: 85vh;
   }
   </style>
-	
-	
-	
 </head>
 <body>
 		<!--Navigation bar -->
@@ -38,17 +34,17 @@
   			</div>
 		</nav> 
 
-			<div id="demo" class="carousel slide" data-ride="carousel">
+		<div id="demo" class="carousel slide" data-ride="carousel">
 
-  <!-- Indicators -->
-  <ul class="carousel-indicators">
-    <li data-target="#demo" data-slide-to="0" class="active"></li>
-    <li data-target="#demo" data-slide-to="1"></li>
-    <li data-target="#demo" data-slide-to="2"></li>
+  		<!-- Indicators -->
+  	<ul class="carousel-indicators">
+    	<li data-target="#demo" data-slide-to="0" class="active"></li>
+    	<li data-target="#demo" data-slide-to="1"></li>
+    	<li data-target="#demo" data-slide-to="2"></li>
         <li data-target="#demo" data-slide-to="2"></li>
-  </ul>
+  	</ul>
   
-  <!-- The slideshow -->
+  		<!-- The slideshow -->
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="/images/4.jpg" alt="Image" width="1100" height="500">

@@ -52,20 +52,10 @@ button.button{
 ul.choosea{
 	text-align:center;
 }
-div.chooseb{
-	width:500px;
-	height:50px;
-	border:1px;
-	background-color:black;
-	text-align:center;
-	display:inline-block;
+a.chooseb
+{
+	width: 50%;
 }
-a.choosec{
-	text-align:center;
-	color:white;
-	font-size:200%;
-}
-
 form {
     width: 100%;
     margin: 0 auto;

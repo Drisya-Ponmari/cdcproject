@@ -1,4 +1,3 @@
-<!--Back button disabling if we click logout -->
 <?php
 			session_start();
 		 	if(!isset($_SESSION["user"])){
@@ -26,14 +25,13 @@
       		<a class="navbar-brand"><h3><strong> Placement Cell </h3></strong> </a>
       		<div class="collapse navbar-collapse" id="navbarSupportedContent">
     		<ul class="navbar-nav ml-auto">
-    		    <li class="nav-link"><a href="/student/home_student.php"><h6><b>Dashboard</b></h6></a></li>
+    		    <li class="nav-link"><a href="/student/home_student.php"><h6><b>Dashboard</b></h6></a></li>    		
     			<li class="nav-link"><a href="/student/logout.php"><h6><b>Logout</b></h6></a></li>
     		</ul>
   			</div>
 		</nav> 
 
-
-<br/>
+		<br/>
 <div class="table-responsive text-nowrap">
 <table class="table table-dark">
   <thead style="background-color:green;">
@@ -48,17 +46,19 @@
       <th scope="col">PROCEDURE OF SELECTION</th>
       <th scope="col">START DATE</th>
       <th scope="col">END DATE</th>
-      <th scope="col">LAST DATE TO APPLY</th>      
+      <th scope="col">LAST DATE TO APPLY</th>  
+       <th scope="col" style="color:green;">---------------------</th>      
       
     </tr>
   </thead>
   <tbody>
-<?php
+  
+  <?php
 
 	include_once 'databaseconnect.php';
 	session_start();
 	$rollno = $_SESSION["user"];
-	$result = mysqli_query($conn,"SELECT * FROM apply_com_view");
+	$result = mysqli_query($conn,"SELECT * FROM browse");
 	if ($result->num_rows > 0) {
 			$iteration = 1;
   			while($row = $result->fetch_assoc()) {
@@ -84,22 +84,30 @@
 					echo $row["end"]; 
 					echo '</th> <th scope="col">';
 					echo $row["last_date"]; 	
+					echo '</th> ';
+					echo '</th> <th scope="col">';
+					echo '<button type="button" class="btn btn-danger" onclick="Apply()" >Apply</button>'; 	
 					echo '</th> ';					
 					echo '</tr> ';
 					$iteration++;
  			 }
 	}
 	 else {
-	   			echo '<script language="JavaScript" type="text/javascript"> if (!alert("Nothing Applied yet")) { history.go(-1); } </script>';
-  			
+  			echo '<script language="JavaScript" type="text/javascript"> if (alert("No jobs to display come back later ")) { history.go(-1); } else {history.go(-1); }</script>';
 	}
 
 ?>
-
-
 		</tbody>
 		</table>
 		</div>
+		
+		<!-- js-->
+		<script>
+			function Apply(){
+    			alert("Updated successfully");		
+   		}
+		</script>
+		
 		<!-- footer -->   
 		<footer>
 			<p> Copyright </p>

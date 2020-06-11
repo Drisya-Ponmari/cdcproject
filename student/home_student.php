@@ -28,6 +28,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
   	<link rel="stylesheet" href="/css/style.css">
+  	<link rel="stylesheet" type="text/css" href="/loginstyle/util.css">
+	<link rel="stylesheet" type="text/css" href="/loginstyle/main.css">
 </head>
 <body>
 
@@ -39,22 +41,25 @@
       		<a class="navbar-brand"><h3><strong> Placement Cell </h3></strong> </a>
       		<div class="collapse navbar-collapse" id="navbarSupportedContent">
     		<ul class="navbar-nav ml-auto">
-      			<li class="nav-link active"><a href="/student/home_student.php">Dashboard</a></li>
-      			<li class="nav-link"><a href="/student/logout.php">Logout</a></li>
+      			<li class="nav-link"><a href="/student/home_student.php" style="color:red;"><h6><b>Dashboard</b></h6></a></li>
+      			<li class="nav-link"><a href="/student/logout.php"><h6><b>Logout</b></h6></a></li>
+
     		</ul>
   			</div>
 		</nav> 
 
-		<h3 style="text-align:center"><?php if(isset($mess)) { echo $mess; } ?></h3>
+		<h6 style="text-align:center;color:red;"><?php if(isset($mess)) { echo $mess; } ?></h6>
+		<br>
+		<br/>
 		<!-- Showing the options -->
 		<ul class="choosea">
-			<p> <div class="chooseb" ><a class="choosec" href="#"> VIEW CV</a></div> </p>
-			<p> <div class="chooseb" ><a class="choosec" href="/student/edit_cv.php"> EDIT CV</a></div>    </p>
+			<li> <a  href="view_cv.php" class="btn btn-success chooseb"> VIEW CV</a> </li><br/>
+			<li> <a  href="/student/edit_cv.php" class="btn btn-success chooseb"> EDIT CV</a></li><br/>
 		<?php if( $mess	== "Verified Student"){
-			echo '<p> <div class="chooseb" ><a class="choosec" href="#"> BROWSE OPPURTUNITIES</a></div> </p>';
+			echo '<li> <a  href="/student/browse.php"class="btn btn-success chooseb">BROWSE OPPURTUNITIES</a></li> <br/>';
 			} 
 		?>
-			<p> <div class="chooseb" ><a class="choosec" href="/student/apply_com.php"> APPLIED COMPANY</a></div> </p>
+			<li> <a  href="/student/apply_com.php"class="btn btn-success chooseb"> APPLIED COMPANY</a></li><br><br/>
 
 		</ul>
 			
