@@ -46,7 +46,7 @@
 
 				<form class="login100-form validate-form" style="text-align:center;"action="#" method="POST">
 					<span class="login100-form-title">
-						<h4>Company Login</h4>
+						<h4>Admin Login</h4>
 					</span>
 
 					<div class="wrap-input100 " >

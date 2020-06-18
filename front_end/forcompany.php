@@ -46,7 +46,7 @@
 					 <img src="/images/company.jpeg" alt="IMG">
 				</div>
 
-				<form class="login100-form validate-form" style="text-align:center;"action="#" method="POST">
+				<form class="login100-form validate-form" style="text-align:center;"action="backend/company_connect.php" method="POST">
 					<span class="login100-form-title">
 						<h4>Company Login</h4>
 					</span>

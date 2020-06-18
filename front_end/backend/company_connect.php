@@ -1,8 +1,12 @@
 <?php
+
+	session_start();
 	$username = $_POST["email"];
 	$password = $_POST["password"];
 	$mysqli = new mysqli("localhost",$username,$password);
 	#echo "yes".$username;
+	$_SESSION["user"] = $username;
+	$_SESSION["pass"] = $password;
 	$sql = "SET ROLE comp_role";
 	if($mysqli->query($sql) == TRUE)
 	{
@@ -22,9 +26,11 @@
 		{
 			echo "<centre>Name " .$row["name"]. "<br>";
 		}
+		header('location:/company/home_company.php');
 	}
 	else
 	{
 		echo "0 results";
 	}
 ?>
+

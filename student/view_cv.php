@@ -5,7 +5,6 @@
 	$row= mysqli_fetch_array($result);
 	?>
 
-s
 	<!DOCTYPE HTML">
 	<html>
 	<head>
@@ -22,7 +21,7 @@ s
 			@page:first { }
 			p { margin-bottom: 0.1in; line-height: 115%; background: transparent }
 			/*Remove the below line to avoid underline under the nav bar */
-			a:link { color: #000080; so-language: zxx; text-decoration: underline }
+			/*a:link { color: #000080; so-language: zxx; text-decoration: underline }*/
 		</style>
 		<style>
 			body {
@@ -45,8 +44,10 @@ s
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-link"><a href="/student/home_student.php"><h6><b>Dashboard</b></h6></a></li>    		
 					<li class="nav-link"><a href="/student/logout.php"><h6><b>Logout</b></h6></a></li>
-					<li > <button class=" btn btn-danger"onclick="ExportPdf()"> Download CV</button> </li>
 				</ul>
+			</div>
+			<div style="" class="" onclick="ExportPdf()">
+				<button>Download CV</button>
 			</div>
 			
 		</nav> 
